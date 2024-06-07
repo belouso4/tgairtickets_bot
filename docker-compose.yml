@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: tgairtickets_bot
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /app/node_modules
